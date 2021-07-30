@@ -1,0 +1,11 @@
+jmeter -Dlog_level.jmeter=DEBUG \
+        -JthreadCountScenario1=4 \
+        -JthreadCountScenario2=4 \
+        -JthreadCountScenario3=4 \
+        -JthreadCountScenario4=4 \
+        -JthreadCountScenario5=6 \
+        -JthreadCountScenario6=6 \
+        -JrampupSeconds=2 \
+        -JthreadLifeTime=180 \
+        -n -t SDKX_e2e.jmx -l execution-plan.jtl -j execution_logs.log \
+        -e -o Reports
